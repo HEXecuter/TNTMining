@@ -13,7 +13,12 @@ public final class TNTMining extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
-        ALL_MATERIALS = EnumSet.allOf(Material.class);
+        ALL_MATERIALS = EnumSet.noneOf(Material.class);
+        for (Material currentMaterial : Material.values()) {
+            if (currentMaterial.isBlock()) {
+                ALL_MATERIALS.add(currentMaterial);
+            }
+        }
         getServer().getPluginManager().registerEvents(new TntLeftClickListener(), this);
 
     }
