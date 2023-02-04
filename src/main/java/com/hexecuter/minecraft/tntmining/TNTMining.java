@@ -34,6 +34,7 @@ public final class TNTMining extends JavaPlugin {
 
     // TODO: eventually change this to loading in a config file
     public static void populateBlocksToBreak() {
+        BLOCKS_TO_BREAK = EnumSet.noneOf(Material.class);
         BLOCKS_TO_BREAK.add(Material.COARSE_DIRT);
         BLOCKS_TO_BREAK.add(Material.DIRT);
         BLOCKS_TO_BREAK.add(Material.DIRT_PATH);
@@ -71,5 +72,8 @@ public final class TNTMining extends JavaPlugin {
         BLOCKS_TO_BREAK.add(Material.WATER);
         BLOCKS_TO_BREAK.add(Material.LAVA);
         BLOCKS_TO_BREAK.add(Material.NETHERRACK);
+        BLOCKS_TO_BREAK.add(Material.GRANITE);
+        BLOCKS_TO_BREAK.add(Material.GRASS_BLOCK);
+        BLOCKS_TO_BREAK.add(Material.TUFF);
     }
 }
