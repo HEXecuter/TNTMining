@@ -1,0 +1,6 @@
+name: TNTMining
+version: '${project.version}'
+main: com.hexecuter.minecraft.tntmining.TNTMining
+api-version: 1.19
+authors: [ HEXecuter ]
+description: Makes TNT more useful by mining large sections of blocks.
