@@ -24,6 +24,7 @@ public class TntLeftClickListener implements Listener {
         boolean leftClickedOnBlock = event.getAction() == Action.LEFT_CLICK_BLOCK;
         boolean hasTntInHand = itemInHand != null && itemInHand.getType() == Material.TNT;
 
+        if(!player.isSneaking()) return;
         if (!leftClickedOnBlock) return;
         if (!hasTntInHand) return;
 
